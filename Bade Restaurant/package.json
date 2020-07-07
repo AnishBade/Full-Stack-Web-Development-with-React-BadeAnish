@@ -1,0 +1,33 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "restaurant",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "author": "anish",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnishBade/Full-Stack-Web-Development-with-React-BadeAnish.git"
+  },
+  "keywords": [
+    "nth"
+  ],
+  "bugs": {
+    "url": "https://github.com/AnishBade/Full-Stack-Web-Development-with-React-BadeAnish/issues"
+  },
+  "homepage": "https://github.com/AnishBade/Full-Stack-Web-Development-with-React-BadeAnish#readme"
+}
