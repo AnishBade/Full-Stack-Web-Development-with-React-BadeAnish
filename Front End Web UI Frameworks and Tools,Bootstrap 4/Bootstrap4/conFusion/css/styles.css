@@ -68,3 +68,9 @@ body{
     width: 50px;
 
 }
+#carouselButton{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    z-index: 1;
+}
