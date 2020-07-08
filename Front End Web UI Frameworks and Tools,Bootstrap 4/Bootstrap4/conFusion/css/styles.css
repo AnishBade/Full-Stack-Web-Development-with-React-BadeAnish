@@ -34,7 +34,7 @@ body{
 .navbar-dark{
     background-color: #512DA8;
 }
-.btn-golden,#bg-golden{
+.btn-golden{
     background-color: rgb(247, 210, 4);
 }
 .tab-content {
