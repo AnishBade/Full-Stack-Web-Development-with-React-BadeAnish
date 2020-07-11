@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/AnishBade/Full-Stack-Web-Development-with-React-BadeAnish#readme",
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "cssmin": "^0.4.3",
     "grunt": "^1.0.2",
     "grunt-browser-sync": "^2.2.0",
@@ -41,6 +42,8 @@
     "grunt-filerev": "^2.3.1",
     "grunt-sass": "^2.1.0",
     "grunt-usemin": "^3.1.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "htmlmin": "0.0.7",
     "install": "^0.13.0",
     "jit-grunt": "^0.10.0",
