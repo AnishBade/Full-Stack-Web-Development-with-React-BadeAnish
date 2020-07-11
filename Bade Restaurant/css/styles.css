@@ -1,30 +1,35 @@
 .title{
-    font-size: 1em;
     color:rgb(109, 63, 236);
     text-shadow: 1px 1px white, -1px -1px #444;
     padding:0px;
     margin:0px;
-    
+    font-size: 35px;
+    font-weight: 500;
+    font-family: cursive;    
     
 }
 
 .welcome{
-    display:inline-block;
-    color:rgb(200, 36, 241);
+ 
     background:linear-gradient(#e7eed5 20%, #56adc5 100%); 
-    padding:5px 10px;
-    
-    font-family: cursive;
+}
+.welcomeText{
+       color:rgb(177, 32, 213);
+    font-size: 18px;
+    padding: 8px 6px;
+     font-family: cursive;
 
 }
+
 #jumbotron{
         background:linear-gradient( #b1d814,#61d6fa 70%); 
 
 }
-.navi{
-    background-color: indigo;
-}
+
 .navtext{
     font-size: 1.5em;
     color:yellow;
+}
+.navbar-dark{
+    background:indigo;
 }

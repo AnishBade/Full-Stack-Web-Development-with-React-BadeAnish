@@ -13,30 +13,71 @@
             <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     </head>
     <body>
+        <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand mr-auto" href="#"><img src="img/logo.jpg" alt="Logo" class="img-fluid" width="60em"></a>            
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class ="navbar-nav mr-auto">
+                            <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home "></span>Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list "></span>Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card"></span>Contact</a></li>
+                    </ul>
+                    <span class="navbar-text">
+                        <!-- <a data-toggle="modal" data-target="#loginModal"> -->
+                        <a  id="loginModalOpen" role="button">
+                            <span class="fa fa-sign-in"></span>Login</a>
+                    </span>
+                </div>
+                
+            </div>
+        </nav>
         <header class="jumbotron mb-0 " id="jumbotron">
            <div class="container">
                <div class="row ">
-                   <div class="mx-auto">
+                   <div class=" mx-auto">
                         
-                            <img src="logo.jpg" alt="Logo" class="img-fluid" width="150em">
-                        
-                   </div>
+                            <img src="img/logo.jpg" alt="Logo" class="img-fluid" width="150em" style="margin-top: 30px;">
+                         
+                    </div>
 
                 </div>
-                <div class="row mx-auto">
-                    <div class="title  mx-auto mt-3 "><h1>HEALTHYFOODS.COM</h1></div>
-                </div>
+                <div class="row ">
+                    <!-- <div class="col-12 col-sm-4"></div> -->
+                    <div class="mx-auto mt-3 mb-4 " >
+                         <div class=" title ">HEALTHYFOODS.COM</div>
+                       
+                    </div>
+                    <!-- <div class="col-12 col-sm-4"></div> -->
+
+
+                    <!-- <div class="mx-auto">
+                        <div class="title  mt-3 mb-4 "><h1 >HEALTHYFOODS.COM</h1></div>
+
+                    </div> -->
+                 </div>
                 <div class="row "> 
-                    <h3 class=" mx-auto">
-                        <span class="badge badge-pill welcome">Welcome to Bade's Group of Hospitality</span>
-                    </h3>
+                    <!-- <div class="col-12 col-sm-4"></div> -->
+                    <div class=" mx-auto" >
+                            <div class="badge badge-pill welcome ">
+                                <div class="welcomeText">
+                                    Welcome to Bade's Group of Hospitality
+                                </div> 
+                            </div>
+                     
+                    </div>
+                    <!-- <div class="col-12 col-sm-4"></div> -->
+                   
                 </div>
                 
            </div>
 
         </header>
         <div>
-        <nav class="navbar navi navbar-expand">
+        <nav class="navbar navbar-dark navbar-expand">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                     <span class="navbar-toggler-icon"></span>
@@ -48,10 +89,15 @@
                         
                     </ul>
                 </div>
-                Anish Bade
+                
                 
             </div>
         </nav>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+
       
     </body>
 </html>
