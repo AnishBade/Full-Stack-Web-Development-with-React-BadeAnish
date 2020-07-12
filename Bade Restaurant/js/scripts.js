@@ -8,7 +8,7 @@ $('document').ready(function(){
 
     $('[data-toggle="tooltip"]').tooltip();
 
-    $('#mycarousel').carousel({interval:3000});
+    $('#mycarousel').carousel({interval:1000});
     $('#carouselButton').click(function(){
         if($('#carouselButton').children('span').hasClass('fa-pause')){
             $('#mycarousel').carousel('pause');
