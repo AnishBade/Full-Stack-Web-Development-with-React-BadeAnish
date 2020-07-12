@@ -38,4 +38,11 @@ $('document').ready(function(){
 
         }
     });
+
+    $('#loginModalOpen').click(function(){
+        $('#loginModal').modal('show');
+    });
+    $('#loginModalClose').click(function(){
+        $('#loginModal').modal('hide');
+    });    
 });

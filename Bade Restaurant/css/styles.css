@@ -3,7 +3,7 @@
     text-shadow: 1px 1px white, -1px -1px #444;
     padding:0px;
     margin:0px;
-    font-size: 35px;
+    font-size: 45px;
     font-weight: 500;
     font-family: cursive;    
     
@@ -56,3 +56,91 @@
   bottom: 1px;
   right: 1px;
   z-index: 1; }
+
+  footer{
+    background: rgb(227, 199, 255);
+  }
+
+.loginTitle{
+      padding: 30px;
+    color: #ffa502;
+    font-family: 'Montez', cursive;
+    font-size: 50px;
+}
+
+#loginModal{
+  top: 10%;
+     height: 600px;
+    width: 350px;
+     background: rgba(52, 54, 54, 0.90);
+    /*background-color: rgb(52, 54, 54); */
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Forum', cursive;
+    color: #ffa502;
+    font-weight: 600;
+}
+.loginCloseButton{
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  background-color: floralwhite;
+}
+
+#txt1,#txt2 {
+    padding: 8px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.3), inset -4px -4px 10px 0 rgba(255, 255, 255, 0.4);
+    background-color: #ffa502;
+    color: rgb(54, 52, 26);
+}
+
+#txt:focus {
+    outline: none;
+}
+
+#txt1::placeholder ,#txt2::placeholder{
+    color: rgb(33, 44, 48);
+}
+
+.form-group:hover {
+    transform: scale(1.2);
+}
+
+.signupButton{
+  
+    padding: 10px 30px;
+    margin-top: 10px;
+    background-color: #ffa502;
+    box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.3), inset -4px -4px 10px 0 rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 20px;
+
+}
+
+.signupButton:hover {
+    background:#ffa502;
+    box-shadow:0 0 10px #ffa502, 0 0 40px #ffa502,0 0 80px #ffa502;
+    opacity:80%;
+}
+
+.icons {
+    margin-left: 8px;
+}
+
+.icons i {
+    margin-right: 10px;
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.icons i:hover {
+   
+    transform:scale(1.5);
+    box-shadow:0 0 10px #ffa502, 0 0 40px #ffa502,0 0 80px #ffa502;
+    opacity:100%
+}
