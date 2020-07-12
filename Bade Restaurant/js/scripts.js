@@ -8,7 +8,7 @@ $('document').ready(function(){
 
     $('[data-toggle="tooltip"]').tooltip();
 
-    $('#mycarousel').carousel({interval:1000});
+    $('#mycarousel').carousel({interval:3000});
     $('#carouselButton').click(function(){
         if($('#carouselButton').children('span').hasClass('fa-pause')){
             $('#mycarousel').carousel('pause');
@@ -44,5 +44,14 @@ $('document').ready(function(){
     });
     $('#loginModalClose').click(function(){
         $('#loginModal').modal('hide');
-    });    
+    });  
+
+    
+    $('#loginModalSignupButton').click(function(){
+        $('#loginModal').modal('hide');
+        $('#signupModal').modal('show');
+    });
+    $('#signupModalClose').click(function(){
+        $('#signupModal').modal('hide');
+    });     
 });

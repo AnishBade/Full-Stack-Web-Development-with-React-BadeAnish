@@ -61,14 +61,14 @@
     background: rgb(227, 199, 255);
   }
 
-.loginTitle{
+.loginTitle,.signupTitle{
       padding: 30px;
     color: #ffa502;
     font-family: 'Montez', cursive;
     font-size: 50px;
 }
 
-#loginModal{
+#loginModal,#signupModal{
   top: 10%;
      height: 600px;
     width: 350px;
@@ -81,7 +81,7 @@
     color: #ffa502;
     font-weight: 600;
 }
-.loginCloseButton{
+.loginCloseButton,.signupCloseButton{
   position: absolute;
   right: 10px;
   top: 0px;
@@ -122,7 +122,7 @@
 
 }
 
-.signupButton:hover {
+.signupButton:hover,.modalLoginButton:hover,.modalSignupButton:hover {
     background:#ffa502;
     box-shadow:0 0 10px #ffa502, 0 0 40px #ffa502,0 0 80px #ffa502;
     opacity:80%;
@@ -143,4 +143,14 @@
     transform:scale(1.5);
     box-shadow:0 0 10px #ffa502, 0 0 40px #ffa502,0 0 80px #ffa502;
     opacity:100%
+}
+.modalLoginButton,.modalSignupButton{
+    position: absolute;
+    right: 60px;
+    padding: 5px 30px;
+ 
+    background-color: #ffa502;
+    box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.3), inset -4px -4px 10px 0 rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 20px;
 }
