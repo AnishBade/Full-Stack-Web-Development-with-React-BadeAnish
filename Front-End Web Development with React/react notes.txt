@@ -11,7 +11,7 @@ In this first React exercise, you will first install create-react-app, the comma
 	>If you choose not to install Yarn, you can continue to use npm in place of yarn without any problem.
 >>Installing create-react-app
 	From the React documentation we learn that the create-react-app CLI makes it easy to create an application that already works, right out of the box. It already follows the best practices suggested by the React community!
-
+	
      >To install create-react-app globally, type the following at the prompt:
 	
 	yarn global add create-react-app@1.5.2
@@ -42,3 +42,11 @@ Thereafter you can set up an online Git repository and synchronize your project 
 >>Conclusions
 In this exercise you installed the create-react-app CLI tool and created a basic React project and served up the compiled project to your browser.
 
+yarn create react-app my-app 
+
+
+
+
+
+
+Thanks - what ended up working (using Yarn) is upgrading CRA with: yarn global upgrade create-react-app - then doing yarn create react-app my-app
