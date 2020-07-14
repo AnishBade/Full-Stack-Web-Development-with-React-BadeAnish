@@ -1,0 +1,44 @@
+Exercise (Instructions): Getting Started with React
+Objectives and Outcomes
+In this first React exercise, you will first install create-react-app, the command line tool for scaffolding React applications. You will then use the tool to scaffold out a basic React application. We will thereafter develop this application into a full-fledged React application in the process of doing the exercises in this course. At the end of this exercise you will be able to:
+
+>>Install create-react-app
+>>Scaffold out a basic React application
+
+>>Installing Yarn
+	>Yarn is another package manager like NPM, but is better suited and faster to work with for React applications. So let us install yarn and use it for building our React applications.
+	>To install Yarn, you can find the instructions for your specific platform at https://yarnpkg.com/en/docs/install.
+	>If you choose not to install Yarn, you can continue to use npm in place of yarn without any problem.
+>>Installing create-react-app
+	From the React documentation we learn that the create-react-app CLI makes it easy to create an application that already works, right out of the box. It already follows the best practices suggested by the React community!
+
+     >To install create-react-app globally, type the following at the prompt:
+	
+	yarn global add create-react-app@1.5.2
+	
+	Use sudo on a Mac and Linux. Alternately you can use npm, by typing "npm install -g create-react-app@1.5.2".
+>>This will make the command line tool for creating React applications. To learn more about the various commands that this CLI provides, type at the prompt:
+	create-react-app --help
+
+>>Generating and Serving a React Project using create-react-app
+	At a convenient location on your computer, create a folder named React and move into that folder.
+	Then type the following at the prompt to create a new React application named confusion:
+
+	create-react-app confusion
+
+This should create a new folder named confusion within your React folder and create the React application in that folder.
+Move to the confusion folder and type the following at the prompt:
+	yarn start
+
+This will compile the project and then open a tab in your default browser at the address http://<Your Computer's Name>:3000.
+You can initialize your project to be a Git repository by typing the following commands at the prompt:
+
+git init
+git add .
+git commit -m "Initial Setup"
+
+Thereafter you can set up an online Git repository and synchronize your project to the online repository. Make sure that the online Git repository is a private repository.
+
+>>Conclusions
+In this exercise you installed the create-react-app CLI tool and created a basic React project and served up the compiled project to your browser.
+
