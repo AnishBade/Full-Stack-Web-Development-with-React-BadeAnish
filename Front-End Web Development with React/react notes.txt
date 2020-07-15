@@ -50,3 +50,55 @@ yarn create react-app my-app
 
 
 Thanks - what ended up working (using Yarn) is upgrading CRA with: yarn global upgrade create-react-app - then doing yarn create react-app my-app
+
+
+
+
+######Exercise (Instructions): Configuring your React Application
+
+
+Objectives and Outcomes
+In this exercise we will set up our project to use Reactstrap (a package supporting easy to use React based Bootstrap 4 components). We will then introduce our first reactstrap component into our application. At the end of this exercise you will be able to:
+
+##Configure your React project to use reactstrap.
+
+>>Start using reactstrap components in your application.
+
+Configure your React Project to use Reactstrap
+
+>>To configure your project to use reactstrap, type the following at the prompt to install reactstrap, and Bootstrap 4:
+
+	yarn add bootstrap@4.0.0
+	yarn add reactstrap@5.0.0
+	yarn add react-popper@0.9.2
+Note: You can also install the same using npm using the "npm install <package> --save" option if you are using npm instead of yarn.
+
+>>Configure to use Bootstrap 4
+	Next, open index.js file in the src folder and add the following line into the imports:
+	
+	. . .
+	import 'bootstrap/dist/css/bootstrap.min.css';
+	. . .
+
+>>Adding a Navigation Bar:
+	Open App.js in the src folder and update it as follows:
+
+	. . .
+
+import { Navbar, NavbarBrand } from 'reactstrap';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Navbar dark color="primary">
+          <div className="container">
+            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+          </div>
+        </Navbar>
+      </div>
+    );
+  }
+}
+
+. . .
