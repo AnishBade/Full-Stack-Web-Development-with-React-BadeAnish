@@ -3,17 +3,23 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
 
 class DishdetailComponent extends Component {
 
-    constructor(props) {
-    super(props);
-    this.state = {
-    
-    };
+
+    componentDidMount(){
+        console.log('DishDetail Component componentDidMount invoked');
     }
+
+    componentDidUpdate(){
+        console.log('DishDetail Component componentDidUpdate invoked');
+    }
+       
+
   render() {
+        console.log('DishDetail Component render invoked');
+
     if (this.props.dish) {
         const commentList = this.props.dish.comments.map((comment, i) => (
           	  <li key={i}>
-                {i}.
+                {i+1}.
                {comment.comment}
                 <br/><br/>	      
           -- {comment.author},{" "}
