@@ -102,3 +102,295 @@ class App extends Component {
 }
 
 . . .
+
+
+
+
+
+>>Exercise (Instructions): Header and Footer
+
+Objectives and Outcomes
+In this exercise you will add in a header and a footer to our React application using two React components. This will illustrate the use of multiple components put together form the application's view. You will also add in the Font Awesome icons and Bootstrap-social for use within your application. At the end of this exercise you will be able to:
+
+Use multiple components and their views to put together the view of the application.
+Make use of Font Awesome icons and Bootstrap-social within your React application
+Using Font Awesome Icons and Bootstrap-Social
+First use yarn or npm to fetch Font Awesome and Bootstrap-social to the project by typing the following at the prompt:
+
+	yarn add font-awesome@4.7.0
+	yarn add bootstrap-social@5.1.1
+
+Then, open index.js file and update it as follows to enable your application to use Font Awesome and Bootstrap Social:
+
+
+	import 'font-awesome/css/font-awesome.css';
+	import 'bootstrap-social/bootstrap-social.css';
+
+Adding a Header and a Footer
+Create a new file named HeaderComponent.js and add the following to it:
+
+import React, { Component } from 'react';
+import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
+
+class Header extends Component {
+  render() {
+    return(
+    <React.Fragment>
+      <Navbar dark>
+        <div className="container">
+            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+        </div>
+      </Navbar>
+      <Jumbotron>
+           <div className="container">
+               <div className="row row-header">
+                   <div className="col-12 col-sm-6">
+                       <h1>Ristorante con Fusion</h1>
+                       <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                   </div>
+               </div>
+           </div>
+       </Jumbotron>
+    </React.Fragment>
+    );
+  }
+}
+
+export default Header;
+
+Then, add another file named FooterComponent.js and add the following to it:
+
+import React from 'react';
+
+function Footer(props) {
+    return(
+    <div className="footer">
+        <div className="container">
+            <div className="row justify-content-center">             
+                <div className="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul className="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div className="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Clear Water Bay Road<br />
+		              Clear Water Bay, Kowloon<br />
+		              HONG KONG<br />
+		              <i className="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
+		              <i className="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
+		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">
+                         confusion@food.net</a>
+                    </address>
+                </div>
+                <div className="col-12 col-sm-4 align-self-center">
+                    <div className="text-center">
+                        <a className="btn btn-social-icon btn-google" href="http://google.com/+"><i className="fa fa-google-plus"></i></a>
+                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i className="fa fa-facebook"></i></a>
+                        <a className="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i className="fa fa-linkedin"></i></a>
+                        <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i className="fa fa-twitter"></i></a>
+                        <a className="btn btn-social-icon btn-google" href="http://youtube.com/"><i className="fa fa-youtube"></i></a>
+                        <a className="btn btn-social-icon" href="mailto:"><i className="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div className="row justify-content-center">             
+                <div className="col-auto">
+                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    )
+}
+
+export default Footer;
+
+Integrating Header and Footer into the React Application
+Now we open MainComponent.js and update it to integrate the header and footer into our application:
+
+
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+
+. . .
+
+        <Header />
+        <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
+        <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />
+        <Footer />\
+
+
+
+
+>>Exercise (Instructions): React Router
+
+>>Objectives and Outcomes
+
+In this exercise we learn to use the React Router to configure and set up navigation among various pages in a React application. At the end of this exercise you will be able to:
+
+Install and configure your application to use React Router
+Configure the routes for React router to enable you to navigate to various pages within your React application
+Installing and Configuring React Router
+First install React Router into your project by typing the following at the prompt:
+
+	yarn add react-router-dom@4.2.2
+
+>>Then, open App.js and update it as follows:
+
+		. . .
+
+import { BrowserRouter } from 'react-router-dom';
+
+. . .
+
+    <BrowserRouter>
+      <div className="App">
+        <Main />
+      </div>
+    </BrowserRouter>
+    
+. . .
+
+
+>>Add a Home Component
+
+Create a new file named HomeComponent.js in the
+ components folder and add the following to it:
+
+	import React from 'react';
+
+	function Home(props) {
+    		return(
+      		<div className="container">
+        		<h4>Home</h4>
+     		 </div>
+    		);
+	}
+
+export default Home;  
+
+>>Configuring the Router
+
+Open MainComponent.js file and update it as follows:\
+
+. . .
+
+import Home from './HomeComponent';
+
+. . .
+
+import { Switch, Route, Redirect } from 'react-router-dom';
+
+. . .
+
+  render() {
+
+
+    const HomePage = () => {
+      return(
+          <Home 
+          />
+      );
+    }
+
+. . .
+
+          <Switch>
+              <Route path='/home' component={HomePage} />
+              <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
+              <Redirect to="/home" />
+          </Switch>
+
+. . .
+
+>>Open HeaderComponent.js and update its contents with the following:
+
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
+
+class Header extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.toggleNav = this.toggleNav.bind(this);
+        this.state = {
+          isNavOpen: false
+        };
+      }
+
+      toggleNav() {
+        this.setState({
+          isNavOpen: !this.state.isNavOpen
+        });
+      }
+
+    render() {
+        return(
+            <div>
+                <Navbar dark expand="md">
+                    <div className="container">
+                        <NavbarToggler onClick={this.toggleNav} />
+                        <NavbarBrand className="mr-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+                        <Collapse isOpen={this.state.isNavOpen} navbar>
+                             <Nav navbar>
+                            <NavItem>
+                                <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+                            </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </div>
+                </Navbar>
+                <Jumbotron>
+                    <div className="container">
+                        <div className="row row-header">
+                            <div className="col-12 col-sm-6">
+                                <h1>Ristorante con Fusion</h1>
+                                <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+   </div>
+                        </div>
+                    </div>
+                </Jumbotron>
+            </div>
+        );
+    }
+}
+
+
+>>Then, open FooterComponent.js and update it as follows:
+
+. . .
+
+import { Link } from 'react-router-dom';
+
+. . .
+
+                        <li><Link to='/home'>Home</Link></li>
+                        <li><Link to='/aboutus'>About Us</Link></li>
+                        <li><Link to='/menu'>Menu</Link></li>
+                        <li><Link to='/contactus'>Contact Us</Link></li>
+                        
+. . .
+
+
+>>Open MenuComponent.js and remove the onClick() from the Card in the RenderMenuItem() function.
+>>Save all the changes and do a Git commit with the message "React Router".
+
+
+Conclusions
+In this exercise you learn about installing, configuring and using the React Router for navigation within your React app.
+
