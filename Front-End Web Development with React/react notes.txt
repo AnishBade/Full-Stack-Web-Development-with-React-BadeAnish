@@ -538,7 +538,7 @@ In this exercise you will install react-redux-form and then convert the controll
 
 Implement a controlled form using react-redux-form
 Installing and Using react-redux-form
-We first install the react-redux-form into our project as follows:
+We first install the react-redux-form( into our project as follows:
 
 yarn add react-redux-form@1.16.8
 

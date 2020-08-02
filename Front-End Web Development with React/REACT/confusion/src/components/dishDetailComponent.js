@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle ,BreadcrumbItem,Breadcrumb} from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle ,BreadcrumbItem,Breadcrumb } from 'reactstrap';
 import {Link} from 'react-router-dom';
+import CommentForm from './CommentFormComponent';
 
   const RenderComment=({comments})=>{
     if (comments !== null || comments.length === 0){
@@ -25,6 +26,8 @@ import {Link} from 'react-router-dom';
         return(
             <div className="col-12 col-md-5 m-1">
               <ul>{commentList}</ul>
+              <CommentForm/>
+
             </div>
         );
 
@@ -45,12 +48,15 @@ import {Link} from 'react-router-dom';
                 <CardTitle>{dish.name}</CardTitle>
                 <CardText>{dish.description}</CardText>
               </CardBody>
+            
             </Card>
           </div>
 
 
     );
   }
+
+ 
 
 const DishdetailComponent=(props)=>{
   if(props.dish){
