@@ -3,7 +3,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle ,Breadcrum
 import {Link} from 'react-router-dom';
 import CommentForm from './CommentFormComponent';
 
-  const RenderComment=({comments})=>{
+  const RenderComment=({comments,addComment,dishId})=>{
     if (comments !== null || comments.length === 0){
           const commentList = comments.map((comment, i) => {
             return(
@@ -26,7 +26,7 @@ import CommentForm from './CommentFormComponent';
         return(
             <div className="col-12 col-md-5 m-1">
               <ul>{commentList}</ul>
-              <CommentForm/>
+              <CommentForm dishId={dishId} addComment={addComment} />
 
             </div>
         );
@@ -82,7 +82,9 @@ const DishdetailComponent=(props)=>{
         <div className="row">
           
           <RenderDish dish={props.dish}/>
-          <RenderComment comments={props.comments}/>
+          <RenderComment comments={props.comments}
+          addComment={props.addComment}
+          dishId={props.dish.id}/>
         </div>
       </div>
 

@@ -25,8 +25,8 @@ class CommentForm extends Component{
     }
 
     handleSubmit(values) {
-        console.log("Current State is: " + JSON.stringify(values));
-        alert("Current State is: " + JSON.stringify(values));
+      
+         this.props.addComment(this.props.dishId, values.rating, values.name, values.message);
     }
 
     render(){
@@ -41,42 +41,42 @@ class CommentForm extends Component{
                     </ModalHeader>
                     <ModalBody>
                         <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
-                        <Row className="form-group">
-                            <Label htmlFor="rating" md={12}>Rating</Label>
-                            <Col md={12}>
-                            <Control.select model=".rating" defaultValue="1" className="form-control" name="rating">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </Control.select>
-                            </Col>
-                        </Row>
-                        <Row className="form-group">
-                            <Label htmlFor="name" md={12}>Your Name</Label>
-                            <Col md={12}>
-                            <Control.text model=".name" id="name" className="form-control" name="name" placeholder="Your Name"
-                                            validators={{ required, minLength: minLength(3), maxLength: maxLength(15) }}/>
-                            <Errors className="text-danger" model=".name" show="touched"
-                                    messages={{
-                                        required: 'Required. ',
-                                        minLength: 'Must be greater than 2 numbers. ',
-                                        maxLength: 'Must be 15 numbers or less. '
-                                    }} />
-                            </Col>
-                        </Row>
-                        <Row className="form-group">
-                            <Label htmlFor="comment" md={12}>Comment</Label>
-                            <Col md={12}>
-                            <Control.textarea model=".message" id="message" rows="6" className="form-control" name="message" />
-                            </Col>
-                        </Row>
-                        <Row className="form-group">
-                            <Col>
-                            <Button type="submit" color="primary">
-                                Submit
-                            </Button>
-                            </Col>
-                        </Row>
+                            <Row className="form-group">
+                                <Label htmlFor="rating" md={12}>Rating</Label>
+                                <Col md={12}>
+                                <Control.select model=".rating" defaultValue="1" className="form-control" name="rating">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </Control.select>
+                                </Col>
+                            </Row>
+                            <Row className="form-group">
+                                <Label htmlFor="name" md={12}>Your Name</Label>
+                                <Col md={12}>
+                                <Control.text model=".name" id="name" className="form-control" name="name" placeholder="Your Name"
+                                                validators={{ required, minLength: minLength(3), maxLength: maxLength(15) }}/>
+                                <Errors className="text-danger" model=".name" show="touched"
+                                        messages={{
+                                            required: 'Required. ',
+                                            minLength: 'Must be greater than 2 numbers. ',
+                                            maxLength: 'Must be 15 numbers or less. '
+                                        }} />
+                                </Col>
+                            </Row>
+                            <Row className="form-group">
+                                <Label htmlFor="comment" md={12}>Comment</Label>
+                                <Col md={12}>
+                                <Control.textarea model=".message" id="comment" rows="6" className="form-control" name="message" />
+                                </Col>
+                            </Row>
+                            <Row className="form-group">
+                                <Col>
+                                <Button type="submit" color="primary">
+                                    Submit
+                                </Button>
+                                </Col>
+                            </Row>
                         </LocalForm>
                     </ModalBody>
                 </Modal>
